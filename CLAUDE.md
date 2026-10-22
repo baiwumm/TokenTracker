@@ -13,6 +13,17 @@ Token Tracker is a local-first AI token usage tracker.
 
 Data flow: AI CLI runs → hook fires → `rollout.js` parses → `queue.jsonl` → local API → dashboard.
 
+## Self-host instance (moved out of this repo)
+
+The private Vercel + Supabase self-host lives in the separate private repo
+**`TokenTrackerSelfhost`** (sibling directory `E:\personal-project\TokenTrackerSelfhost`), seeded with full git history from this repo's former branch
+`feat/selfhost-vercel-supabase` (last upstream commit `2600660b`). That branch
+was migrated and then deliberately deleted here — do not recreate it, do not
+merge it back, and do not deploy this repo to the `tokentracker.baiwumm.com`
+Vercel project. All self-host development and its roadmap (server-side
+pricing, sessions/skills endpoints, desktop-shell auth) live in that repo,
+documented in its `docs/selfhost-vercel-supabase.md` and `AGENTS.md`.
+
 For the canonical list of supported providers, grep `parse*Incremental` in `src/lib/rollout.js` — the source of truth, not this file.
 
 ## Frequently used commands
