@@ -529,6 +529,13 @@
       "cache_write": 0.2,
       "note": "StepFun Step 3.7 Flash (issue #283). Official platform.stepfun.ai pricing: $0.20 / $0.04 (cache hit) / $1.15 per MTok in/read/out. No published cache-write surcharge, so cache_write = input."
     },
+    "step-5-preview": {
+      "input": 1,
+      "output": 2.7,
+      "cache_read": 0.1,
+      "cache_write": 1,
+      "note": "Official StepFun platform pricing verified 2026-10-22 at https://platform.stepfun.ai/docs/en/guides/pricing/details ($1.00 / $0.10 cache hit / $2.70 per MTok in/read/out; output includes the reasoning trace, so there is no separate reasoning rate). The official cache-miss input price includes writing new content to the cache, so cache_write = input, the same convention as step-3.7-flash. Launch-week third-party write-ups quoted $0.05 cache hit; the live official page is the rate of record — re-verify on refresh. OpenCode's free SKU is the suffixed step-5-preview-free and stays zero via the opencode -free suffix rule."
+    },
     "step-3.5-flash": {
       "input": 0.1,
       "output": 0.3,
@@ -562,6 +569,15 @@
     "auto": "composer-1"
   },
   "source_exact": {
+    "opencode": {
+      "big-pickle": {
+        "input": 0,
+        "output": 0,
+        "cache_read": 0,
+        "cache_write": 0,
+        "note": "OpenCode Zen stealth model, officially free (\"Big Pickle is a stealth model that's free on OpenCode for a limited time\"), verified 2026-10-22 on the OpenCode Console pricing table: https://opencode.ai/v2/docs/console/models. Source-scoped to opencode rows so the zero rate cannot follow the id to another provider. Remove or re-point when the free preview window ends — the model collects feedback while free, so a paid listing may follow."
+      }
+    },
     "acode": {
       "spark-x2.5": { "input": 0.13, "output": 0.50, "cache_read": 0.02, "cache_write": 0.13 },
       "spark-x2.5-4b": { "input": 0.00, "output": 0.00, "cache_read": 0.00, "cache_write": 0.00 },
